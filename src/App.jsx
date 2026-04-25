@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatsDashboard from './components/StatsDashboard';
-import { Settings, Shield, Zap, Tool, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Settings, Shield, Zap, Wrench, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white border border-gray-200 p-10 group hover:border-crimson transition-all relative overflow-hidden">
