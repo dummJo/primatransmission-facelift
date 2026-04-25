@@ -38,7 +38,11 @@ export default function Nav({ tok, lang, setLang, page, setPage }) {
             <img src="/uploads/logo-1777109144994.jpg" alt="Prima" style={{ width: 34, height: 34, objectFit: 'contain' }} />
           </div>
           <div>
-            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 15, color: 'rgb(235,235,235)', lineHeight: 1.1 }}>PT PRIMA ANJAYA SANTOSO</div>
+            <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 15, lineHeight: 1.1 }}>
+              <span style={{ color: 'rgb(235,235,235)' }}>PT </span>
+              <span style={{ color: t.crimson }}>PRIMA</span>
+              <span style={{ color: 'rgb(235,235,235)' }}> ANJAYA SANTOSO</span>
+            </div>
             <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 9, color: 'rgb(226,226,226)', letterSpacing: '0.12em' }}>POWER TRANSMISSION INDONESIA</div>
           </div>
         </div>

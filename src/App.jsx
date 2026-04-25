@@ -32,7 +32,7 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', background: tok.bg }}>
       <Nav tok={tok} lang={lang} setLang={setLang} page={page} setPage={setPage} />
-      {renderPage()}
+      <main>{renderPage()}</main>
     </div>
   );
 }
