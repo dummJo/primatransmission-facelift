@@ -1,16 +1,65 @@
-# React + Vite
+# PT Prima Anjaya Santoso — Website Facelift
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **PT Prima Anjaya Santoso**, Indonesia's one-stop industrial drivetrain reliability partner. Built with React + Vite, deployed on Vercel.
 
-Currently, two official plugins are available:
+🌐 **Live:** [primatransmission.vercel.app](https://primatransmission.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+PT Prima Anjaya Santoso (est. 2002, Jakarta) provides complete drivetrain solutions — from own-brand Prima Chain manufacturing and MTO custom pulleys, to certified SKF Microlog vibration diagnostics and laser alignment services — for Indonesia's mining, cement, palm oil, and sugar mill sectors.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Pages
+
+| Page | Description |
+|---|---|
+| **Home** | Hero, services spotlight, product preview, industries, case studies, audit form |
+| **About Us** | Company story, 2002–2026 milestones, brand portfolio, values |
+| **Products** | Filterable catalog — Prima Chain, Martin Sprocket, MTO Pulleys, Mayr |
+| **Engineering Services** | Vibration Analysis (SKF Microlog), Dynamic Balancing, Laser Alignment |
+| **Industries** | Mining, Cement, Palm Oil, Sugar Mill — tabbed deep-dives |
+| **B2B Portal** | Partner login, purchase history, one-click reorder |
+
+---
+
+## Tech Stack
+
+- **React 19** + **Vite 8**
+- **Space Grotesk** · **IBM Plex Sans** · **IBM Plex Mono**
+- Inline React styles — no CSS framework
+- Bilingual **EN / ID** toggle
+- Deployed on **Vercel**
+
+## Design Tokens — Variant B "Industrial Crimson · Light"
+
+| Token | Value |
+|---|---|
+| Background | `#f0ebe1` |
+| Card | `#ffffff` |
+| Section BG | `#e5dfd4` |
+| Crimson | `#b81528` |
+| Navy | `#0e2540` |
+| Text | `#0a1520` |
+
+---
+
+## Development
+
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production build → dist/
+npm run preview   # preview production build
+```
+
+---
+
+## Contact
+
+**PT Prima Anjaya Santoso**  
+Jl. Pangeran Jayakarta No. 121/41, Jakarta 10730  
+(021) 6295166 · 6262179 · 6282060  
+mulyono@primatransmission.com
