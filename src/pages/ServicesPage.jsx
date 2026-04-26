@@ -4,7 +4,7 @@ import { SectionLabel, PlaceholderImg, Btn } from '../components/Shared';
 import Footer from '../components/Footer';
 import AuditForm from './AuditForm';
 
-export default function ServicesPage({ tok, lang, setPage }) {
+export default function ServicesPage({ tok, lang, setPage, goToAudit }) {
   const t = tok || defaultTokens;
   const c = copy[lang];
 

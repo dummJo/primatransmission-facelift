@@ -3,7 +3,7 @@ import { defaultTokens } from '../tokens';
 import { copy } from '../copy';
 import { Btn } from './Shared';
 
-export default function Nav({ tok, lang, setLang, page, setPage }) {
+export default function Nav({ tok, lang, setLang, page, setPage, goToAudit }) {
   const t = tok || defaultTokens;
   const c = copy[lang];
   const [scrolled, setScrolled] = useState(false);
@@ -66,7 +66,7 @@ export default function Nav({ tok, lang, setLang, page, setPage }) {
             style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: 'rgba(255,255,255,0.5)', background: 'none', border: '1px solid rgba(255,255,255,0.15)', padding: '5px 10px', cursor: 'pointer', letterSpacing: '0.08em' }}>
             {lang === 'EN' ? 'ID' : 'EN'}
           </button>
-          <Btn tok={tok} size="sm" onClick={() => setPage('services')}>{c.heroCTA1}</Btn>
+          <Btn tok={tok} size="sm" onClick={goToAudit}>{c.heroCTA1}</Btn>
         </div>
       </div>
     </nav>

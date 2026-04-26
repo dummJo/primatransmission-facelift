@@ -18,20 +18,31 @@ export default function App() {
     window.scrollTo({ top: 0 });
   }, [page]);
 
+  const goToAudit = () => {
+    if (page === 'services') {
+      document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setPage('services');
+      setTimeout(() => {
+        document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    }
+  };
+
   const renderPage = () => {
     switch (page) {
-      case 'about':      return <AboutPage tok={tok} lang={lang} setPage={setPage} />;
-      case 'products':   return <ProductsPage tok={tok} lang={lang} setPage={setPage} />;
-      case 'services':   return <ServicesPage tok={tok} lang={lang} setPage={setPage} />;
-      case 'industries': return <IndustriesPage tok={tok} lang={lang} setPage={setPage} />;
-      case 'portal':     return <B2BPortalPage tok={tok} lang={lang} setPage={setPage} />;
-      default:           return <HomePage tok={tok} lang={lang} setPage={setPage} />;
+      case 'about':      return <AboutPage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
+      case 'products':   return <ProductsPage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
+      case 'services':   return <ServicesPage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
+      case 'industries': return <IndustriesPage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
+      case 'portal':     return <B2BPortalPage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
+      default:           return <HomePage tok={tok} lang={lang} setPage={setPage} goToAudit={goToAudit} />;
     }
   };
 
   return (
     <div style={{ minHeight: '100vh', background: tok.bg }}>
-      <Nav tok={tok} lang={lang} setLang={setLang} page={page} setPage={setPage} />
+      <Nav tok={tok} lang={lang} setLang={setLang} page={page} setPage={setPage} goToAudit={goToAudit} />
       <main>{renderPage()}</main>
     </div>
   );

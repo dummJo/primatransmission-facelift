@@ -4,7 +4,7 @@ import { copy } from '../copy';
 import { SectionLabel, PlaceholderImg, Btn } from '../components/Shared';
 import Footer from '../components/Footer';
 
-export default function IndustriesPage({ tok, lang, setPage }) {
+export default function IndustriesPage({ tok, lang, setPage, goToAudit }) {
   const t = tok || defaultTokens;
   const c = copy[lang];
   const [active, setActive] = useState(0);
@@ -85,7 +85,7 @@ export default function IndustriesPage({ tok, lang, setPage }) {
               <div key={j} style={{ background: t.bgCard, border: `1px solid ${t.border}`, padding: '10px 16px', fontFamily: "'IBM Plex Sans', sans-serif", fontSize: 13, color: t.text }}>{p}</div>
             ))}
           </div>
-          <Btn tok={tok} size="lg" onClick={() => setPage('services')}>{c.heroCTA1} →</Btn>
+          <Btn tok={tok} size="lg" onClick={goToAudit}>{c.heroCTA1} →</Btn>
         </div>
       </div>
       <Footer tok={tok} lang={lang} setPage={setPage} />

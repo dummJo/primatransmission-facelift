@@ -4,7 +4,7 @@ import { Btn, SectionLabel, StatBar, PlaceholderImg, ProductCard, ServiceCard } 
 import Footer from '../components/Footer';
 import AuditForm from './AuditForm';
 
-export default function HomePage({ tok, lang, setPage }) {
+export default function HomePage({ tok, lang, setPage, goToAudit }) {
   const t = tok || defaultTokens;
   const c = copy[lang];
 
@@ -44,7 +44,7 @@ export default function HomePage({ tok, lang, setPage }) {
             <div>
               <p style={{ fontSize: 18, color: t.text, lineHeight: 1.75, marginBottom: 40 }}>{c.heroSubB}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-                <Btn tok={tok} size="lg" onClick={() => setPage('services')}>{c.heroCTA1} →</Btn>
+                <Btn tok={tok} size="lg" onClick={goToAudit}>{c.heroCTA1} →</Btn>
                 <Btn tok={tok} variant="outline" size="lg">{c.heroCTA2}</Btn>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function HomePage({ tok, lang, setPage }) {
                     <span key={i} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: t.textMuted, background: 'rgba(255,255,255,0.04)', border: `1px solid ${t.border}`, padding: '4px 10px', letterSpacing: '0.05em' }}>{tag}</span>
                   ))}
                 </div>
-                <Btn tok={tok} size="md" onClick={(e) => { e.stopPropagation(); setPage('services'); }}>{c.heroCTA1} →</Btn>
+                <Btn tok={tok} size="md" onClick={(e) => { e.stopPropagation(); goToAudit(); }}>{c.heroCTA1} →</Btn>
               </div>
               <div style={{ padding: '44px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
                 <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 10, color: t.textMuted, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 8 }}>
@@ -132,7 +132,7 @@ export default function HomePage({ tok, lang, setPage }) {
               <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 22, color: t.text, marginBottom: 6 }}>{lang === 'EN' ? 'Book a Free On-Site Vibration Audit' : 'Pesan Audit Vibrasi Gratis On-Site'}</div>
               <div style={{ fontSize: 14, color: t.textMuted }}>{lang === 'EN' ? 'Our certified engineers visit your facility — no cost, no obligation.' : 'Engineer bersertifikat kami mengunjungi fasilitas Anda — tanpa biaya, tanpa kewajiban.'}</div>
             </div>
-            <Btn tok={tok} size="lg" onClick={() => setPage('services')} style={{ flexShrink: 0 }}>{c.heroCTA1} →</Btn>
+            <Btn tok={tok} size="lg" onClick={goToAudit} style={{ flexShrink: 0 }}>{c.heroCTA1} →</Btn>
           </div>
         </div>
       </section>

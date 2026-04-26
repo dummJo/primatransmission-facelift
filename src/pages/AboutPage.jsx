@@ -3,7 +3,7 @@ import { copy } from '../copy';
 import { SectionLabel, PlaceholderImg, Btn } from '../components/Shared';
 import Footer from '../components/Footer';
 
-export default function AboutPage({ tok, lang, setPage }) {
+export default function AboutPage({ tok, lang, setPage, goToAudit }) {
   const t = tok || defaultTokens;
   const c = copy[lang];
 
@@ -170,7 +170,7 @@ export default function AboutPage({ tok, lang, setPage }) {
             {lang === 'EN' ? 'Book a free on-site vibration audit — our first step to engineering the right solution for your machinery.' : 'Pesan audit vibrasi on-site gratis — langkah pertama kami untuk merancang solusi yang tepat untuk mesin Anda.'}
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center' }}>
-            <Btn tok={tok} size="lg" onClick={() => setPage('services')}>{lang === 'EN' ? 'Book Free Vibration Audit →' : 'Pesan Audit Vibrasi Gratis →'}</Btn>
+            <Btn tok={tok} size="lg" onClick={goToAudit}>{lang === 'EN' ? 'Book Free Vibration Audit →' : 'Pesan Audit Vibrasi Gratis →'}</Btn>
             <Btn tok={tok} variant="outline" size="lg" onClick={() => setPage('products')}>{lang === 'EN' ? 'View Products' : 'Lihat Produk'}</Btn>
           </div>
         </div>
