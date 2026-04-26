@@ -8,7 +8,7 @@ const linkStyle = (base = {}) => ({
   cursor: 'pointer',
 });
 
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Jl+Pangeran+Jayakarta+No+121+41+Jakarta+10730+Indonesia';
+const MAPS_URL = 'https://maps.app.goo.gl/yPhsWNf3LSuUdqQ8A';
 
 const contactItems = [
   {
